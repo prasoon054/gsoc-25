@@ -1,0 +1,750 @@
+execve("/usr/bin/sqlite3", ["/usr/bin/sqlite3", "sales.db", "--init", "init.sql"], 0x7fff2bc93d28 /* 9 vars */) = 0
+arch_prctl(ARCH_SET_FS, 0x77b1d01a7b08) = 0
+set_tid_address(0x77b1d01a7f70)         = 34
+brk(NULL)                               = 0x61c4b6c85000
+brk(0x61c4b6c87000)                     = 0x61c4b6c87000
+mmap(0x61c4b6c85000, 4096, PROT_NONE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x61c4b6c85000
+open("/usr/lib/libz.so.1", O_RDONLY|O_LARGEFILE|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+open("/etc/ld-musl-x86_64.path", O_RDONLY|O_LARGEFILE|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+open("/lib/libz.so.1", O_RDONLY|O_LARGEFILE|O_CLOEXEC) = 3
+fcntl(3, F_SETFD, FD_CLOEXEC)           = 0
+fstat(3, {st_mode=S_IFREG|0755, st_size=100208, ...}) = 0
+read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\0\0\0\0\0\0\0\0"..., 960) = 960
+mmap(NULL, 106496, PROT_READ, MAP_PRIVATE, 3, 0) = 0x77b1d00ec000
+mmap(0x77b1d00ef000, 57344, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED, 3, 0x3000) = 0x77b1d00ef000
+mmap(0x77b1d00fd000, 28672, PROT_READ, MAP_PRIVATE|MAP_FIXED, 3, 0x11000) = 0x77b1d00fd000
+mmap(0x77b1d0104000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED, 3, 0x17000) = 0x77b1d0104000
+close(3)                                = 0
+mprotect(0x77b1d0104000, 4096, PROT_READ) = 0
+mprotect(0x77b1d01a4000, 4096, PROT_READ) = 0
+mprotect(0x61c485631000, 20480, PROT_READ) = 0
+ioctl(2, TIOCGWINSZ, 0x7fff58123278)    = -1 ENOTTY (Not a tty)
+ioctl(1, TIOCGWINSZ, {ws_row=24, ws_col=80, ws_xpixel=0, ws_ypixel=0}) = 0
+ioctl(0, TIOCGWINSZ, {ws_row=24, ws_col=80, ws_xpixel=0, ws_ypixel=0}) = 0
+rt_sigprocmask(SIG_UNBLOCK, [RT_1 RT_2], NULL, 8) = 0
+rt_sigaction(SIGINT, {sa_handler=0x61c4854d2c30, sa_mask=[], sa_flags=SA_RESTORER|SA_RESTART, sa_restorer=0x77b1d0153ea8}, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+access("sales.db", F_OK)                = -1 ENOENT (No such file or directory)
+open("init.sql", O_RDONLY|O_LARGEFILE)  = 3
+mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x77b1d00eb000
+writev(2, [{iov_base="-- Loading resources from init.s"..., iov_len=35}, {iov_base=NULL, iov_len=0}], 2-- Loading resources from init.sql
+) = 35
+read(3, ".read build.sql\n.read query.sql\n", 1024) = 32
+stat("build.sql", {st_mode=S_IFREG|0644, st_size=1957, ...}) = 0
+open("build.sql", O_RDONLY|O_LARGEFILE) = 4
+read(4, "-- Drop tables if they exist\nDRO"..., 1024) = 1024
+open("sales.db", O_RDONLY|O_LARGEFILE)  = -1 ENOENT (No such file or directory)
+getcwd("/tmp", 4096)                    = 5
+lstat("/tmp", {st_mode=S_IFDIR|S_ISVTX|0777, st_size=4096, ...}) = 0
+lstat("/tmp/sales.db", 0x7fff5811dc50)  = -1 ENOENT (No such file or directory)
+getpid()                                = 34
+getpid()                                = 34
+open("/tmp/sales.db", O_RDWR|O_CREAT|O_LARGEFILE|O_NOFOLLOW|O_CLOEXEC, 0644) = 5
+fcntl(5, F_SETFD, FD_CLOEXEC)           = 0
+fstat(5, {st_mode=S_IFREG|0644, st_size=0, ...}) = 0
+fstat(5, {st_mode=S_IFREG|0644, st_size=0, ...}) = 0
+stat("/tmp/sales.db", {st_mode=S_IFREG|0644, st_size=0, ...}) = 0
+mmap(NULL, 16384, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x77b1d00e7000
+mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x77b1d00e5000
+pread64(5, "", 100, 0)                  = 0
+mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x77b1d00e4000
+mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x77b1d00e3000
+mmap(NULL, 49152, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x77b1d00d7000
+fcntl(5, F_SETLK, {l_type=F_RDLCK, l_whence=SEEK_SET, l_start=1073741824, l_len=1}) = 0
+fcntl(5, F_SETLK, {l_type=F_RDLCK, l_whence=SEEK_SET, l_start=1073741826, l_len=510}) = 0
+fcntl(5, F_SETLK, {l_type=F_UNLCK, l_whence=SEEK_SET, l_start=1073741824, l_len=1}) = 0
+stat("/tmp/sales.db-journal", 0x7fff5811ed90) = -1 ENOENT (No such file or directory)
+stat("/tmp/sales.db-wal", 0x7fff5811ed90) = -1 ENOENT (No such file or directory)
+fstat(5, {st_mode=S_IFREG|0644, st_size=0, ...}) = 0
+mmap(NULL, 90112, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x77b1d00c1000
+fcntl(5, F_SETLK, {l_type=F_UNLCK, l_whence=SEEK_SET, l_start=0, l_len=0}) = 0
+fcntl(5, F_SETLK, {l_type=F_RDLCK, l_whence=SEEK_SET, l_start=1073741824, l_len=1}) = 0
+fcntl(5, F_SETLK, {l_type=F_RDLCK, l_whence=SEEK_SET, l_start=1073741826, l_len=510}) = 0
+fcntl(5, F_SETLK, {l_type=F_UNLCK, l_whence=SEEK_SET, l_start=1073741824, l_len=1}) = 0
+stat("/tmp/sales.db-journal", 0x7fff5811f920) = -1 ENOENT (No such file or directory)
+pread64(5, "", 16, 24)                  = 0
+stat("/tmp/sales.db-wal", 0x7fff5811f920) = -1 ENOENT (No such file or directory)
+fstat(5, {st_mode=S_IFREG|0644, st_size=0, ...}) = 0
+fcntl(5, F_SETLK, {l_type=F_UNLCK, l_whence=SEEK_SET, l_start=0, l_len=0}) = 0
+fcntl(5, F_SETLK, {l_type=F_RDLCK, l_whence=SEEK_SET, l_start=1073741824, l_len=1}) = 0
+fcntl(5, F_SETLK, {l_type=F_RDLCK, l_whence=SEEK_SET, l_start=1073741826, l_len=510}) = 0
+fcntl(5, F_SETLK, {l_type=F_UNLCK, l_whence=SEEK_SET, l_start=1073741824, l_len=1}) = 0
+stat("/tmp/sales.db-journal", 0x7fff5811f920) = -1 ENOENT (No such file or directory)
+pread64(5, "", 16, 24)                  = 0
+stat("/tmp/sales.db-wal", 0x7fff5811f920) = -1 ENOENT (No such file or directory)
+fstat(5, {st_mode=S_IFREG|0644, st_size=0, ...}) = 0
+fcntl(5, F_SETLK, {l_type=F_UNLCK, l_whence=SEEK_SET, l_start=0, l_len=0}) = 0
+fcntl(5, F_SETLK, {l_type=F_RDLCK, l_whence=SEEK_SET, l_start=1073741824, l_len=1}) = 0
+fcntl(5, F_SETLK, {l_type=F_RDLCK, l_whence=SEEK_SET, l_start=1073741826, l_len=510}) = 0
+fcntl(5, F_SETLK, {l_type=F_UNLCK, l_whence=SEEK_SET, l_start=1073741824, l_len=1}) = 0
+stat("/tmp/sales.db-journal", 0x7fff5811f920) = -1 ENOENT (No such file or directory)
+pread64(5, "", 16, 24)                  = 0
+stat("/tmp/sales.db-wal", 0x7fff5811f920) = -1 ENOENT (No such file or directory)
+fstat(5, {st_mode=S_IFREG|0644, st_size=0, ...}) = 0
+fcntl(5, F_SETLK, {l_type=F_UNLCK, l_whence=SEEK_SET, l_start=0, l_len=0}) = 0
+fcntl(5, F_SETLK, {l_type=F_RDLCK, l_whence=SEEK_SET, l_start=1073741824, l_len=1}) = 0
+fcntl(5, F_SETLK, {l_type=F_RDLCK, l_whence=SEEK_SET, l_start=1073741826, l_len=510}) = 0
+fcntl(5, F_SETLK, {l_type=F_UNLCK, l_whence=SEEK_SET, l_start=1073741824, l_len=1}) = 0
+stat("/tmp/sales.db-journal", 0x7fff5811f920) = -1 ENOENT (No such file or directory)
+pread64(5, "", 16, 24)                  = 0
+stat("/tmp/sales.db-wal", 0x7fff5811f920) = -1 ENOENT (No such file or directory)
+fstat(5, {st_mode=S_IFREG|0644, st_size=0, ...}) = 0
+fcntl(5, F_SETLK, {l_type=F_UNLCK, l_whence=SEEK_SET, l_start=0, l_len=0}) = 0
+mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x77b1d00c0000
+mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x77b1d00bf000
+mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x77b1d00be000
+munmap(0x77b1d00be000, 4096)            = 0
+mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x77b1d00be000
+fcntl(5, F_SETLK, {l_type=F_RDLCK, l_whence=SEEK_SET, l_start=1073741824, l_len=1}) = 0
+fcntl(5, F_SETLK, {l_type=F_RDLCK, l_whence=SEEK_SET, l_start=1073741826, l_len=510}) = 0
+fcntl(5, F_SETLK, {l_type=F_UNLCK, l_whence=SEEK_SET, l_start=1073741824, l_len=1}) = 0
+stat("/tmp/sales.db-journal", 0x7fff5811f920) = -1 ENOENT (No such file or directory)
+pread64(5, "", 16, 24)                  = 0
+stat("/tmp/sales.db-wal", 0x7fff5811f920) = -1 ENOENT (No such file or directory)
+fstat(5, {st_mode=S_IFREG|0644, st_size=0, ...}) = 0
+fcntl(5, F_SETLK, {l_type=F_WRLCK, l_whence=SEEK_SET, l_start=1073741825, l_len=1}) = 0
+mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x77b1d00bd000
+getpid()                                = 34
+stat("/tmp/sales.db", {st_mode=S_IFREG|0644, st_size=0, ...}) = 0
+open("/tmp/sales.db-journal", O_RDWR|O_CREAT|O_LARGEFILE|O_NOFOLLOW|O_CLOEXEC, 0644) = 6
+fcntl(6, F_SETFD, FD_CLOEXEC)           = 0
+fstat(6, {st_mode=S_IFREG|0644, st_size=0, ...}) = 0
+geteuid()                               = 0
+fchown(6, 0, 0)                         = 0
+getpid()                                = 34
+open("/dev/urandom", O_RDONLY|O_LARGEFILE|O_CLOEXEC) = 7
+fcntl(7, F_SETFD, FD_CLOEXEC)           = 0
+read(7, "0\317\256n\17\254\37K\6\344\327pu\rz%\341\312b\275\365W\305\356\320\2036F\302\351\320\36"..., 44) = 44
+close(7)                                = 0
+pwrite64(6, "\0\0\0\0\0\0\0\0\0\0\0\0\255s\336k\0\0\0\0\0\0\2\0\0\0\20\0\0\0\0\0"..., 512, 0) = 512
+fcntl(5, F_SETLK, {l_type=F_WRLCK, l_whence=SEEK_SET, l_start=1073741824, l_len=1}) = 0
+fcntl(5, F_SETLK, {l_type=F_WRLCK, l_whence=SEEK_SET, l_start=1073741826, l_len=510}) = 0
+pread64(6, "", 8, 512)                  = 0
+fdatasync(6)                            = 0
+open("/tmp", O_RDONLY|O_LARGEFILE|O_CLOEXEC) = 7
+fcntl(7, F_SETFD, FD_CLOEXEC)           = 0
+fdatasync(7)                            = 0
+close(7)                                = 0
+pwrite64(6, "\331\325\5\371 \241c\327\0\0\0\0", 12, 0) = 12
+fdatasync(6)                            = 0
+pwrite64(5, "SQLite format 3\0\20\0\1\1\0@  \0\0\0\1\0\0\0\2"..., 4096, 0) = 4096
+pwrite64(5, "\r\0\0\0\0\20\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"..., 4096, 4096) = 4096
+fdatasync(5)                            = 0
+close(6)                                = 0
+unlink("/tmp/sales.db-journal")         = 0
+munmap(0x77b1d00bd000, 4096)            = 0
+fcntl(5, F_SETLK, {l_type=F_RDLCK, l_whence=SEEK_SET, l_start=1073741826, l_len=510}) = 0
+fcntl(5, F_SETLK, {l_type=F_UNLCK, l_whence=SEEK_SET, l_start=1073741824, l_len=2}) = 0
+fcntl(5, F_SETLK, {l_type=F_UNLCK, l_whence=SEEK_SET, l_start=0, l_len=0}) = 0
+munmap(0x77b1d00be000, 4096)            = 0
+munmap(0x77b1d00bf000, 4096)            = 0
+mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x77b1d00bf000
+mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x77b1d00be000
+munmap(0x77b1d00be000, 4096)            = 0
+fcntl(5, F_SETLK, {l_type=F_RDLCK, l_whence=SEEK_SET, l_start=1073741824, l_len=1}) = 0
+fcntl(5, F_SETLK, {l_type=F_RDLCK, l_whence=SEEK_SET, l_start=1073741826, l_len=510}) = 0
+fcntl(5, F_SETLK, {l_type=F_UNLCK, l_whence=SEEK_SET, l_start=1073741824, l_len=1}) = 0
+stat("/tmp/sales.db-journal", 0x7fff5811f920) = -1 ENOENT (No such file or directory)
+pread64(5, "\0\0\0\1\0\0\0\2\0\0\0\0\0\0\0\0", 16, 24) = 16
+stat("/tmp/sales.db-wal", 0x7fff5811f920) = -1 ENOENT (No such file or directory)
+fstat(5, {st_mode=S_IFREG|0644, st_size=8192, ...}) = 0
+fcntl(5, F_SETLK, {l_type=F_WRLCK, l_whence=SEEK_SET, l_start=1073741825, l_len=1}) = 0
+mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x77b1d00be000
+stat("/tmp/sales.db", {st_mode=S_IFREG|0644, st_size=8192, ...}) = 0
+getpid()                                = 34
+stat("/tmp/sales.db", {st_mode=S_IFREG|0644, st_size=8192, ...}) = 0
+open("/tmp/sales.db-journal", O_RDWR|O_CREAT|O_LARGEFILE|O_NOFOLLOW|O_CLOEXEC, 0644) = 6
+fcntl(6, F_SETFD, FD_CLOEXEC)           = 0
+fstat(6, {st_mode=S_IFREG|0644, st_size=0, ...}) = 0
+geteuid()                               = 0
+fchown(6, 0, 0)                         = 0
+pwrite64(6, "\0\0\0\0\0\0\0\0\0\0\0\0\276t\17t\0\0\0\2\0\0\2\0\0\0\20\0\0\0\0\0"..., 512, 0) = 512
+pwrite64(6, "\0\0\0\1", 4, 512)         = 4
+pwrite64(6, "SQLite format 3\0\20\0\1\1\0@  \0\0\0\1\0\0\0\2"..., 4096, 516) = 4096
+pwrite64(6, "\276t\17t", 4, 4612)       = 4
+fcntl(5, F_SETLK, {l_type=F_WRLCK, l_whence=SEEK_SET, l_start=1073741824, l_len=1}) = 0
+fcntl(5, F_SETLK, {l_type=F_WRLCK, l_whence=SEEK_SET, l_start=1073741826, l_len=510}) = 0
+pread64(6, "", 8, 5120)                 = 0
+fdatasync(6)                            = 0
+open("/tmp", O_RDONLY|O_LARGEFILE|O_CLOEXEC) = 7
+fcntl(7, F_SETFD, FD_CLOEXEC)           = 0
+fdatasync(7)                            = 0
+close(7)                                = 0
+pwrite64(6, "\331\325\5\371 \241c\327\0\0\0\1", 12, 0) = 12
+fdatasync(6)                            = 0
+pwrite64(5, "SQLite format 3\0\20\0\1\1\0@  \0\0\0\2\0\0\0\3"..., 4096, 0) = 4096
+pwrite64(5, "\r\0\0\0\0\20\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"..., 4096, 8192) = 4096
+fdatasync(5)                            = 0
+close(6)                                = 0
+unlink("/tmp/sales.db-journal")         = 0
+munmap(0x77b1d00be000, 4096)            = 0
+fcntl(5, F_SETLK, {l_type=F_RDLCK, l_whence=SEEK_SET, l_start=1073741826, l_len=510}) = 0
+fcntl(5, F_SETLK, {l_type=F_UNLCK, l_whence=SEEK_SET, l_start=1073741824, l_len=2}) = 0
+fcntl(5, F_SETLK, {l_type=F_UNLCK, l_whence=SEEK_SET, l_start=0, l_len=0}) = 0
+munmap(0x77b1d00bf000, 4096)            = 0
+mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x77b1d00bf000
+mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x77b1d00be000
+fcntl(5, F_SETLK, {l_type=F_RDLCK, l_whence=SEEK_SET, l_start=1073741824, l_len=1}) = 0
+fcntl(5, F_SETLK, {l_type=F_RDLCK, l_whence=SEEK_SET, l_start=1073741826, l_len=510}) = 0
+fcntl(5, F_SETLK, {l_type=F_UNLCK, l_whence=SEEK_SET, l_start=1073741824, l_len=1}) = 0
+stat("/tmp/sales.db-journal", 0x7fff5811f920) = -1 ENOENT (No such file or directory)
+pread64(5, "\0\0\0\2\0\0\0\3\0\0\0\0\0\0\0\0", 16, 24) = 16
+stat("/tmp/sales.db-wal", 0x7fff5811f920) = -1 ENOENT (No such file or directory)
+fstat(5, {st_mode=S_IFREG|0644, st_size=12288, ...}) = 0
+fcntl(5, F_SETLK, {l_type=F_WRLCK, l_whence=SEEK_SET, l_start=1073741825, l_len=1}) = 0
+stat("/tmp/sales.db", {st_mode=S_IFREG|0644, st_size=12288, ...}) = 0
+getpid()                                = 34
+stat("/tmp/sales.db", {st_mode=S_IFREG|0644, st_size=12288, ...}) = 0
+open("/tmp/sales.db-journal", O_RDWR|O_CREAT|O_LARGEFILE|O_NOFOLLOW|O_CLOEXEC, 0644) = 6
+fcntl(6, F_SETFD, FD_CLOEXEC)           = 0
+fstat(6, {st_mode=S_IFREG|0644, st_size=0, ...}) = 0
+geteuid()                               = 0
+fchown(6, 0, 0)                         = 0
+pwrite64(6, "\0\0\0\0\0\0\0\0\0\0\0\0\340B\206\264\0\0\0\3\0\0\2\0\0\0\20\0\0\0\0\0"..., 512, 0) = 512
+pwrite64(6, "\0\0\0\1", 4, 512)         = 4
+pwrite64(6, "SQLite format 3\0\20\0\1\1\0@  \0\0\0\2\0\0\0\3"..., 4096, 516) = 4096
+pwrite64(6, "\340B\207\r", 4, 4612)     = 4
+fcntl(5, F_SETLK, {l_type=F_WRLCK, l_whence=SEEK_SET, l_start=1073741824, l_len=1}) = 0
+fcntl(5, F_SETLK, {l_type=F_WRLCK, l_whence=SEEK_SET, l_start=1073741826, l_len=510}) = 0
+pread64(6, "", 8, 5120)                 = 0
+fdatasync(6)                            = 0
+open("/tmp", O_RDONLY|O_LARGEFILE|O_CLOEXEC) = 7
+fcntl(7, F_SETFD, FD_CLOEXEC)           = 0
+fdatasync(7)                            = 0
+close(7)                                = 0
+pwrite64(6, "\331\325\5\371 \241c\327\0\0\0\1", 12, 0) = 12
+fdatasync(6)                            = 0
+pwrite64(5, "SQLite format 3\0\20\0\1\1\0@  \0\0\0\3\0\0\0\4"..., 4096, 0) = 4096
+pwrite64(5, "\r\0\0\0\0\20\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"..., 4096, 12288) = 4096
+fdatasync(5)                            = 0
+close(6)                                = 0
+unlink("/tmp/sales.db-journal")         = 0
+fcntl(5, F_SETLK, {l_type=F_RDLCK, l_whence=SEEK_SET, l_start=1073741826, l_len=510}) = 0
+fcntl(5, F_SETLK, {l_type=F_UNLCK, l_whence=SEEK_SET, l_start=1073741824, l_len=2}) = 0
+fcntl(5, F_SETLK, {l_type=F_UNLCK, l_whence=SEEK_SET, l_start=0, l_len=0}) = 0
+munmap(0x77b1d00bf000, 4096)            = 0
+mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x77b1d00bf000
+fcntl(5, F_SETLK, {l_type=F_RDLCK, l_whence=SEEK_SET, l_start=1073741824, l_len=1}) = 0
+fcntl(5, F_SETLK, {l_type=F_RDLCK, l_whence=SEEK_SET, l_start=1073741826, l_len=510}) = 0
+fcntl(5, F_SETLK, {l_type=F_UNLCK, l_whence=SEEK_SET, l_start=1073741824, l_len=1}) = 0
+stat("/tmp/sales.db-journal", 0x7fff5811f920) = -1 ENOENT (No such file or directory)
+pread64(5, "\0\0\0\3\0\0\0\4\0\0\0\0\0\0\0\0", 16, 24) = 16
+stat("/tmp/sales.db-wal", 0x7fff5811f920) = -1 ENOENT (No such file or directory)
+fstat(5, {st_mode=S_IFREG|0644, st_size=16384, ...}) = 0
+fcntl(5, F_SETLK, {l_type=F_WRLCK, l_whence=SEEK_SET, l_start=1073741825, l_len=1}) = 0
+stat("/tmp/sales.db", {st_mode=S_IFREG|0644, st_size=16384, ...}) = 0
+getpid()                                = 34
+stat("/tmp/sales.db", {st_mode=S_IFREG|0644, st_size=16384, ...}) = 0
+open("/tmp/sales.db-journal", O_RDWR|O_CREAT|O_LARGEFILE|O_NOFOLLOW|O_CLOEXEC, 0644) = 6
+fcntl(6, F_SETFD, FD_CLOEXEC)           = 0
+fstat(6, {st_mode=S_IFREG|0644, st_size=0, ...}) = 0
+geteuid()                               = 0
+fchown(6, 0, 0)                         = 0
+pwrite64(6, "\0\0\0\0\0\0\0\0\0\0\0\0\304\241}\314\0\0\0\4\0\0\2\0\0\0\20\0\0\0\0\0"..., 512, 0) = 512
+pwrite64(6, "\0\0\0\1", 4, 512)         = 4
+pwrite64(6, "SQLite format 3\0\20\0\1\1\0@  \0\0\0\3\0\0\0\4"..., 4096, 516) = 4096
+pwrite64(6, "\304\241~j", 4, 4612)      = 4
+fcntl(5, F_SETLK, {l_type=F_WRLCK, l_whence=SEEK_SET, l_start=1073741824, l_len=1}) = 0
+fcntl(5, F_SETLK, {l_type=F_WRLCK, l_whence=SEEK_SET, l_start=1073741826, l_len=510}) = 0
+pread64(6, "", 8, 5120)                 = 0
+fdatasync(6)                            = 0
+open("/tmp", O_RDONLY|O_LARGEFILE|O_CLOEXEC) = 7
+fcntl(7, F_SETFD, FD_CLOEXEC)           = 0
+fdatasync(7)                            = 0
+close(7)                                = 0
+pwrite64(6, "\331\325\5\371 \241c\327\0\0\0\1", 12, 0) = 12
+fdatasync(6)                            = 0
+pwrite64(5, "SQLite format 3\0\20\0\1\1\0@  \0\0\0\4\0\0\0\5"..., 4096, 0) = 4096
+pwrite64(5, "\r\0\0\0\0\20\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"..., 4096, 16384) = 4096
+fdatasync(5)                            = 0
+close(6)                                = 0
+unlink("/tmp/sales.db-journal")         = 0
+fcntl(5, F_SETLK, {l_type=F_RDLCK, l_whence=SEEK_SET, l_start=1073741826, l_len=510}) = 0
+fcntl(5, F_SETLK, {l_type=F_UNLCK, l_whence=SEEK_SET, l_start=1073741824, l_len=2}) = 0
+fcntl(5, F_SETLK, {l_type=F_UNLCK, l_whence=SEEK_SET, l_start=0, l_len=0}) = 0
+munmap(0x77b1d00bf000, 4096)            = 0
+read(4, "erID, Name, Email) VALUES (1, 'A"..., 1024) = 933
+fcntl(5, F_SETLK, {l_type=F_RDLCK, l_whence=SEEK_SET, l_start=1073741824, l_len=1}) = 0
+fcntl(5, F_SETLK, {l_type=F_RDLCK, l_whence=SEEK_SET, l_start=1073741826, l_len=510}) = 0
+fcntl(5, F_SETLK, {l_type=F_UNLCK, l_whence=SEEK_SET, l_start=1073741824, l_len=1}) = 0
+stat("/tmp/sales.db-journal", 0x7fff5811f920) = -1 ENOENT (No such file or directory)
+pread64(5, "\0\0\0\4\0\0\0\5\0\0\0\0\0\0\0\0", 16, 24) = 16
+stat("/tmp/sales.db-wal", 0x7fff5811f920) = -1 ENOENT (No such file or directory)
+fstat(5, {st_mode=S_IFREG|0644, st_size=20480, ...}) = 0
+fcntl(5, F_SETLK, {l_type=F_WRLCK, l_whence=SEEK_SET, l_start=1073741825, l_len=1}) = 0
+stat("/tmp/sales.db", {st_mode=S_IFREG|0644, st_size=20480, ...}) = 0
+getpid()                                = 34
+stat("/tmp/sales.db", {st_mode=S_IFREG|0644, st_size=20480, ...}) = 0
+open("/tmp/sales.db-journal", O_RDWR|O_CREAT|O_LARGEFILE|O_NOFOLLOW|O_CLOEXEC, 0644) = 6
+fcntl(6, F_SETFD, FD_CLOEXEC)           = 0
+fstat(6, {st_mode=S_IFREG|0644, st_size=0, ...}) = 0
+geteuid()                               = 0
+fchown(6, 0, 0)                         = 0
+pwrite64(6, "\0\0\0\0\0\0\0\0\0\0\0\0\360\342\247\216\0\0\0\5\0\0\2\0\0\0\20\0\0\0\0\0"..., 512, 0) = 512
+pwrite64(6, "\0\0\0\2", 4, 512)         = 4
+pwrite64(6, "\r\0\0\0\0\20\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"..., 4096, 516) = 4096
+pwrite64(6, "\360\342\247\216", 4, 4612) = 4
+fcntl(5, F_SETLK, {l_type=F_WRLCK, l_whence=SEEK_SET, l_start=1073741824, l_len=1}) = 0
+fcntl(5, F_SETLK, {l_type=F_WRLCK, l_whence=SEEK_SET, l_start=1073741826, l_len=510}) = 0
+pwrite64(6, "\0\0\0\1", 4, 4616)        = 4
+pwrite64(6, "SQLite format 3\0\20\0\1\1\0@  \0\0\0\4\0\0\0\5"..., 4096, 4620) = 4096
+pwrite64(6, "\360\342\250\325", 4, 8716) = 4
+pread64(6, "", 8, 9216)                 = 0
+fdatasync(6)                            = 0
+open("/tmp", O_RDONLY|O_LARGEFILE|O_CLOEXEC) = 7
+fcntl(7, F_SETFD, FD_CLOEXEC)           = 0
+fdatasync(7)                            = 0
+close(7)                                = 0
+pwrite64(6, "\331\325\5\371 \241c\327\0\0\0\2", 12, 0) = 12
+fdatasync(6)                            = 0
+pwrite64(5, "SQLite format 3\0\20\0\1\1\0@  \0\0\0\5\0\0\0\5"..., 4096, 0) = 4096
+pwrite64(5, "\r\0\0\0\1\17\336\0\17\336\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"..., 4096, 4096) = 4096
+fdatasync(5)                            = 0
+close(6)                                = 0
+unlink("/tmp/sales.db-journal")         = 0
+fcntl(5, F_SETLK, {l_type=F_RDLCK, l_whence=SEEK_SET, l_start=1073741826, l_len=510}) = 0
+fcntl(5, F_SETLK, {l_type=F_UNLCK, l_whence=SEEK_SET, l_start=1073741824, l_len=2}) = 0
+fcntl(5, F_SETLK, {l_type=F_UNLCK, l_whence=SEEK_SET, l_start=0, l_len=0}) = 0
+fcntl(5, F_SETLK, {l_type=F_RDLCK, l_whence=SEEK_SET, l_start=1073741824, l_len=1}) = 0
+fcntl(5, F_SETLK, {l_type=F_RDLCK, l_whence=SEEK_SET, l_start=1073741826, l_len=510}) = 0
+fcntl(5, F_SETLK, {l_type=F_UNLCK, l_whence=SEEK_SET, l_start=1073741824, l_len=1}) = 0
+stat("/tmp/sales.db-journal", 0x7fff5811f920) = -1 ENOENT (No such file or directory)
+pread64(5, "\0\0\0\5\0\0\0\5\0\0\0\0\0\0\0\0", 16, 24) = 16
+stat("/tmp/sales.db-wal", 0x7fff5811f920) = -1 ENOENT (No such file or directory)
+fstat(5, {st_mode=S_IFREG|0644, st_size=20480, ...}) = 0
+fcntl(5, F_SETLK, {l_type=F_WRLCK, l_whence=SEEK_SET, l_start=1073741825, l_len=1}) = 0
+stat("/tmp/sales.db", {st_mode=S_IFREG|0644, st_size=20480, ...}) = 0
+getpid()                                = 34
+stat("/tmp/sales.db", {st_mode=S_IFREG|0644, st_size=20480, ...}) = 0
+open("/tmp/sales.db-journal", O_RDWR|O_CREAT|O_LARGEFILE|O_NOFOLLOW|O_CLOEXEC, 0644) = 6
+fcntl(6, F_SETFD, FD_CLOEXEC)           = 0
+fstat(6, {st_mode=S_IFREG|0644, st_size=0, ...}) = 0
+geteuid()                               = 0
+fchown(6, 0, 0)                         = 0
+pwrite64(6, "\0\0\0\0\0\0\0\0\0\0\0\0(qTU\0\0\0\5\0\0\2\0\0\0\20\0\0\0\0\0"..., 512, 0) = 512
+pwrite64(6, "\0\0\0\2", 4, 512)         = 4
+pwrite64(6, "\r\0\0\0\1\17\336\0\17\336\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"..., 4096, 516) = 4096
+pwrite64(6, "(qTU", 4, 4612)            = 4
+fcntl(5, F_SETLK, {l_type=F_WRLCK, l_whence=SEEK_SET, l_start=1073741824, l_len=1}) = 0
+fcntl(5, F_SETLK, {l_type=F_WRLCK, l_whence=SEEK_SET, l_start=1073741826, l_len=510}) = 0
+pwrite64(6, "\0\0\0\1", 4, 4616)        = 4
+pwrite64(6, "SQLite format 3\0\20\0\1\1\0@  \0\0\0\5\0\0\0\5"..., 4096, 4620) = 4096
+pwrite64(6, "(qU\234", 4, 8716)         = 4
+pread64(6, "", 8, 9216)                 = 0
+fdatasync(6)                            = 0
+open("/tmp", O_RDONLY|O_LARGEFILE|O_CLOEXEC) = 7
+fcntl(7, F_SETFD, FD_CLOEXEC)           = 0
+fdatasync(7)                            = 0
+close(7)                                = 0
+pwrite64(6, "\331\325\5\371 \241c\327\0\0\0\2", 12, 0) = 12
+fdatasync(6)                            = 0
+pwrite64(5, "SQLite format 3\0\20\0\1\1\0@  \0\0\0\6\0\0\0\5"..., 4096, 0) = 4096
+pwrite64(5, "\r\0\0\0\2\17\276\0\17\336\17\276\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"..., 4096, 4096) = 4096
+fdatasync(5)                            = 0
+close(6)                                = 0
+unlink("/tmp/sales.db-journal")         = 0
+fcntl(5, F_SETLK, {l_type=F_RDLCK, l_whence=SEEK_SET, l_start=1073741826, l_len=510}) = 0
+fcntl(5, F_SETLK, {l_type=F_UNLCK, l_whence=SEEK_SET, l_start=1073741824, l_len=2}) = 0
+fcntl(5, F_SETLK, {l_type=F_UNLCK, l_whence=SEEK_SET, l_start=0, l_len=0}) = 0
+fcntl(5, F_SETLK, {l_type=F_RDLCK, l_whence=SEEK_SET, l_start=1073741824, l_len=1}) = 0
+fcntl(5, F_SETLK, {l_type=F_RDLCK, l_whence=SEEK_SET, l_start=1073741826, l_len=510}) = 0
+fcntl(5, F_SETLK, {l_type=F_UNLCK, l_whence=SEEK_SET, l_start=1073741824, l_len=1}) = 0
+stat("/tmp/sales.db-journal", 0x7fff5811f920) = -1 ENOENT (No such file or directory)
+pread64(5, "\0\0\0\6\0\0\0\5\0\0\0\0\0\0\0\0", 16, 24) = 16
+stat("/tmp/sales.db-wal", 0x7fff5811f920) = -1 ENOENT (No such file or directory)
+fstat(5, {st_mode=S_IFREG|0644, st_size=20480, ...}) = 0
+fcntl(5, F_SETLK, {l_type=F_WRLCK, l_whence=SEEK_SET, l_start=1073741825, l_len=1}) = 0
+stat("/tmp/sales.db", {st_mode=S_IFREG|0644, st_size=20480, ...}) = 0
+getpid()                                = 34
+stat("/tmp/sales.db", {st_mode=S_IFREG|0644, st_size=20480, ...}) = 0
+open("/tmp/sales.db-journal", O_RDWR|O_CREAT|O_LARGEFILE|O_NOFOLLOW|O_CLOEXEC, 0644) = 6
+fcntl(6, F_SETFD, FD_CLOEXEC)           = 0
+fstat(6, {st_mode=S_IFREG|0644, st_size=0, ...}) = 0
+geteuid()                               = 0
+fchown(6, 0, 0)                         = 0
+pwrite64(6, "\0\0\0\0\0\0\0\0\0\0\0\0L\222~\27\0\0\0\5\0\0\2\0\0\0\20\0\0\0\0\0"..., 512, 0) = 512
+pwrite64(6, "\0\0\0\3", 4, 512)         = 4
+pwrite64(6, "\r\0\0\0\0\20\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"..., 4096, 516) = 4096
+pwrite64(6, "L\222~\27", 4, 4612)       = 4
+fcntl(5, F_SETLK, {l_type=F_WRLCK, l_whence=SEEK_SET, l_start=1073741824, l_len=1}) = 0
+fcntl(5, F_SETLK, {l_type=F_WRLCK, l_whence=SEEK_SET, l_start=1073741826, l_len=510}) = 0
+pwrite64(6, "\0\0\0\1", 4, 4616)        = 4
+pwrite64(6, "SQLite format 3\0\20\0\1\1\0@  \0\0\0\6\0\0\0\5"..., 4096, 4620) = 4096
+pwrite64(6, "L\222\177^", 4, 8716)      = 4
+pread64(6, "", 8, 9216)                 = 0
+fdatasync(6)                            = 0
+open("/tmp", O_RDONLY|O_LARGEFILE|O_CLOEXEC) = 7
+fcntl(7, F_SETFD, FD_CLOEXEC)           = 0
+fdatasync(7)                            = 0
+close(7)                                = 0
+pwrite64(6, "\331\325\5\371 \241c\327\0\0\0\2", 12, 0) = 12
+fdatasync(6)                            = 0
+pwrite64(5, "SQLite format 3\0\20\0\1\1\0@  \0\0\0\7\0\0\0\5"..., 4096, 0) = 4096
+pwrite64(5, "\r\0\0\0\1\17\354\0\17\354\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"..., 4096, 8192) = 4096
+fdatasync(5)                            = 0
+close(6)                                = 0
+unlink("/tmp/sales.db-journal")         = 0
+fcntl(5, F_SETLK, {l_type=F_RDLCK, l_whence=SEEK_SET, l_start=1073741826, l_len=510}) = 0
+fcntl(5, F_SETLK, {l_type=F_UNLCK, l_whence=SEEK_SET, l_start=1073741824, l_len=2}) = 0
+fcntl(5, F_SETLK, {l_type=F_UNLCK, l_whence=SEEK_SET, l_start=0, l_len=0}) = 0
+fcntl(5, F_SETLK, {l_type=F_RDLCK, l_whence=SEEK_SET, l_start=1073741824, l_len=1}) = 0
+fcntl(5, F_SETLK, {l_type=F_RDLCK, l_whence=SEEK_SET, l_start=1073741826, l_len=510}) = 0
+fcntl(5, F_SETLK, {l_type=F_UNLCK, l_whence=SEEK_SET, l_start=1073741824, l_len=1}) = 0
+stat("/tmp/sales.db-journal", 0x7fff5811f920) = -1 ENOENT (No such file or directory)
+pread64(5, "\0\0\0\7\0\0\0\5\0\0\0\0\0\0\0\0", 16, 24) = 16
+stat("/tmp/sales.db-wal", 0x7fff5811f920) = -1 ENOENT (No such file or directory)
+fstat(5, {st_mode=S_IFREG|0644, st_size=20480, ...}) = 0
+fcntl(5, F_SETLK, {l_type=F_WRLCK, l_whence=SEEK_SET, l_start=1073741825, l_len=1}) = 0
+stat("/tmp/sales.db", {st_mode=S_IFREG|0644, st_size=20480, ...}) = 0
+getpid()                                = 34
+stat("/tmp/sales.db", {st_mode=S_IFREG|0644, st_size=20480, ...}) = 0
+open("/tmp/sales.db-journal", O_RDWR|O_CREAT|O_LARGEFILE|O_NOFOLLOW|O_CLOEXEC, 0644) = 6
+fcntl(6, F_SETFD, FD_CLOEXEC)           = 0
+fstat(6, {st_mode=S_IFREG|0644, st_size=0, ...}) = 0
+geteuid()                               = 0
+fchown(6, 0, 0)                         = 0
+pwrite64(6, "\0\0\0\0\0\0\0\0\0\0\0\0z\7\316\211\0\0\0\5\0\0\2\0\0\0\20\0\0\0\0\0"..., 512, 0) = 512
+pwrite64(6, "\0\0\0\3", 4, 512)         = 4
+pwrite64(6, "\r\0\0\0\1\17\354\0\17\354\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"..., 4096, 516) = 4096
+pwrite64(6, "z\7\316\211", 4, 4612)     = 4
+fcntl(5, F_SETLK, {l_type=F_WRLCK, l_whence=SEEK_SET, l_start=1073741824, l_len=1}) = 0
+fcntl(5, F_SETLK, {l_type=F_WRLCK, l_whence=SEEK_SET, l_start=1073741826, l_len=510}) = 0
+pwrite64(6, "\0\0\0\1", 4, 4616)        = 4
+pwrite64(6, "SQLite format 3\0\20\0\1\1\0@  \0\0\0\7\0\0\0\5"..., 4096, 4620) = 4096
+pwrite64(6, "z\7\317\320", 4, 8716)     = 4
+pread64(6, "", 8, 9216)                 = 0
+fdatasync(6)                            = 0
+open("/tmp", O_RDONLY|O_LARGEFILE|O_CLOEXEC) = 7
+fcntl(7, F_SETFD, FD_CLOEXEC)           = 0
+fdatasync(7)                            = 0
+close(7)                                = 0
+pwrite64(6, "\331\325\5\371 \241c\327\0\0\0\2", 12, 0) = 12
+fdatasync(6)                            = 0
+pwrite64(5, "SQLite format 3\0\20\0\1\1\0@  \0\0\0\10\0\0\0\5"..., 4096, 0) = 4096
+pwrite64(5, "\r\0\0\0\2\17\324\0\17\354\17\324\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"..., 4096, 8192) = 4096
+fdatasync(5)                            = 0
+close(6)                                = 0
+unlink("/tmp/sales.db-journal")         = 0
+fcntl(5, F_SETLK, {l_type=F_RDLCK, l_whence=SEEK_SET, l_start=1073741826, l_len=510}) = 0
+fcntl(5, F_SETLK, {l_type=F_UNLCK, l_whence=SEEK_SET, l_start=1073741824, l_len=2}) = 0
+fcntl(5, F_SETLK, {l_type=F_UNLCK, l_whence=SEEK_SET, l_start=0, l_len=0}) = 0
+fcntl(5, F_SETLK, {l_type=F_RDLCK, l_whence=SEEK_SET, l_start=1073741824, l_len=1}) = 0
+fcntl(5, F_SETLK, {l_type=F_RDLCK, l_whence=SEEK_SET, l_start=1073741826, l_len=510}) = 0
+fcntl(5, F_SETLK, {l_type=F_UNLCK, l_whence=SEEK_SET, l_start=1073741824, l_len=1}) = 0
+stat("/tmp/sales.db-journal", 0x7fff5811f920) = -1 ENOENT (No such file or directory)
+pread64(5, "\0\0\0\10\0\0\0\5\0\0\0\0\0\0\0\0", 16, 24) = 16
+stat("/tmp/sales.db-wal", 0x7fff5811f920) = -1 ENOENT (No such file or directory)
+fstat(5, {st_mode=S_IFREG|0644, st_size=20480, ...}) = 0
+fcntl(5, F_SETLK, {l_type=F_WRLCK, l_whence=SEEK_SET, l_start=1073741825, l_len=1}) = 0
+stat("/tmp/sales.db", {st_mode=S_IFREG|0644, st_size=20480, ...}) = 0
+getpid()                                = 34
+stat("/tmp/sales.db", {st_mode=S_IFREG|0644, st_size=20480, ...}) = 0
+open("/tmp/sales.db-journal", O_RDWR|O_CREAT|O_LARGEFILE|O_NOFOLLOW|O_CLOEXEC, 0644) = 6
+fcntl(6, F_SETFD, FD_CLOEXEC)           = 0
+fstat(6, {st_mode=S_IFREG|0644, st_size=0, ...}) = 0
+geteuid()                               = 0
+fchown(6, 0, 0)                         = 0
+pwrite64(6, "\0\0\0\0\0\0\0\0\0\0\0\0\36I\301\232\0\0\0\5\0\0\2\0\0\0\20\0\0\0\0\0"..., 512, 0) = 512
+pwrite64(6, "\0\0\0\3", 4, 512)         = 4
+pwrite64(6, "\r\0\0\0\2\17\324\0\17\354\17\324\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"..., 4096, 516) = 4096
+pwrite64(6, "\36I\301\232", 4, 4612)    = 4
+fcntl(5, F_SETLK, {l_type=F_WRLCK, l_whence=SEEK_SET, l_start=1073741824, l_len=1}) = 0
+fcntl(5, F_SETLK, {l_type=F_WRLCK, l_whence=SEEK_SET, l_start=1073741826, l_len=510}) = 0
+pwrite64(6, "\0\0\0\1", 4, 4616)        = 4
+pwrite64(6, "SQLite format 3\0\20\0\1\1\0@  \0\0\0\10\0\0\0\5"..., 4096, 4620) = 4096
+pwrite64(6, "\36I\302\341", 4, 8716)    = 4
+pread64(6, "", 8, 9216)                 = 0
+fdatasync(6)                            = 0
+open("/tmp", O_RDONLY|O_LARGEFILE|O_CLOEXEC) = 7
+fcntl(7, F_SETFD, FD_CLOEXEC)           = 0
+fdatasync(7)                            = 0
+close(7)                                = 0
+pwrite64(6, "\331\325\5\371 \241c\327\0\0\0\2", 12, 0) = 12
+fdatasync(6)                            = 0
+pwrite64(5, "SQLite format 3\0\20\0\1\1\0@  \0\0\0\t\0\0\0\5"..., 4096, 0) = 4096
+pwrite64(5, "\r\0\0\0\3\17\274\0\17\354\17\324\17\274\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"..., 4096, 8192) = 4096
+fdatasync(5)                            = 0
+close(6)                                = 0
+unlink("/tmp/sales.db-journal")         = 0
+fcntl(5, F_SETLK, {l_type=F_RDLCK, l_whence=SEEK_SET, l_start=1073741826, l_len=510}) = 0
+fcntl(5, F_SETLK, {l_type=F_UNLCK, l_whence=SEEK_SET, l_start=1073741824, l_len=2}) = 0
+fcntl(5, F_SETLK, {l_type=F_UNLCK, l_whence=SEEK_SET, l_start=0, l_len=0}) = 0
+fcntl(5, F_SETLK, {l_type=F_RDLCK, l_whence=SEEK_SET, l_start=1073741824, l_len=1}) = 0
+fcntl(5, F_SETLK, {l_type=F_RDLCK, l_whence=SEEK_SET, l_start=1073741826, l_len=510}) = 0
+fcntl(5, F_SETLK, {l_type=F_UNLCK, l_whence=SEEK_SET, l_start=1073741824, l_len=1}) = 0
+stat("/tmp/sales.db-journal", 0x7fff5811f920) = -1 ENOENT (No such file or directory)
+pread64(5, "\0\0\0\t\0\0\0\5\0\0\0\0\0\0\0\0", 16, 24) = 16
+stat("/tmp/sales.db-wal", 0x7fff5811f920) = -1 ENOENT (No such file or directory)
+fstat(5, {st_mode=S_IFREG|0644, st_size=20480, ...}) = 0
+fcntl(5, F_SETLK, {l_type=F_WRLCK, l_whence=SEEK_SET, l_start=1073741825, l_len=1}) = 0
+stat("/tmp/sales.db", {st_mode=S_IFREG|0644, st_size=20480, ...}) = 0
+getpid()                                = 34
+stat("/tmp/sales.db", {st_mode=S_IFREG|0644, st_size=20480, ...}) = 0
+open("/tmp/sales.db-journal", O_RDWR|O_CREAT|O_LARGEFILE|O_NOFOLLOW|O_CLOEXEC, 0644) = 6
+fcntl(6, F_SETFD, FD_CLOEXEC)           = 0
+fstat(6, {st_mode=S_IFREG|0644, st_size=0, ...}) = 0
+geteuid()                               = 0
+fchown(6, 0, 0)                         = 0
+pwrite64(6, "\0\0\0\0\0\0\0\0\0\0\0\0*\16\244\321\0\0\0\5\0\0\2\0\0\0\20\0\0\0\0\0"..., 512, 0) = 512
+pwrite64(6, "\0\0\0\4", 4, 512)         = 4
+pwrite64(6, "\r\0\0\0\0\20\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"..., 4096, 516) = 4096
+pwrite64(6, "*\16\244\321", 4, 4612)    = 4
+fcntl(5, F_SETLK, {l_type=F_WRLCK, l_whence=SEEK_SET, l_start=1073741824, l_len=1}) = 0
+fcntl(5, F_SETLK, {l_type=F_WRLCK, l_whence=SEEK_SET, l_start=1073741826, l_len=510}) = 0
+pwrite64(6, "\0\0\0\1", 4, 4616)        = 4
+pwrite64(6, "SQLite format 3\0\20\0\1\1\0@  \0\0\0\t\0\0\0\5"..., 4096, 4620) = 4096
+pwrite64(6, "*\16\246\30", 4, 8716)     = 4
+pread64(6, "", 8, 9216)                 = 0
+fdatasync(6)                            = 0
+open("/tmp", O_RDONLY|O_LARGEFILE|O_CLOEXEC) = 7
+fcntl(7, F_SETFD, FD_CLOEXEC)           = 0
+fdatasync(7)                            = 0
+close(7)                                = 0
+pwrite64(6, "\331\325\5\371 \241c\327\0\0\0\2", 12, 0) = 12
+fdatasync(6)                            = 0
+pwrite64(5, "SQLite format 3\0\20\0\1\1\0@  \0\0\0\n\0\0\0\5"..., 4096, 0) = 4096
+pwrite64(5, "\r\0\0\0\1\17\360\0\17\360\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"..., 4096, 12288) = 4096
+fdatasync(5)                            = 0
+close(6)                                = 0
+unlink("/tmp/sales.db-journal")         = 0
+fcntl(5, F_SETLK, {l_type=F_RDLCK, l_whence=SEEK_SET, l_start=1073741826, l_len=510}) = 0
+fcntl(5, F_SETLK, {l_type=F_UNLCK, l_whence=SEEK_SET, l_start=1073741824, l_len=2}) = 0
+fcntl(5, F_SETLK, {l_type=F_UNLCK, l_whence=SEEK_SET, l_start=0, l_len=0}) = 0
+fcntl(5, F_SETLK, {l_type=F_RDLCK, l_whence=SEEK_SET, l_start=1073741824, l_len=1}) = 0
+fcntl(5, F_SETLK, {l_type=F_RDLCK, l_whence=SEEK_SET, l_start=1073741826, l_len=510}) = 0
+fcntl(5, F_SETLK, {l_type=F_UNLCK, l_whence=SEEK_SET, l_start=1073741824, l_len=1}) = 0
+stat("/tmp/sales.db-journal", 0x7fff5811f920) = -1 ENOENT (No such file or directory)
+pread64(5, "\0\0\0\n\0\0\0\5\0\0\0\0\0\0\0\0", 16, 24) = 16
+stat("/tmp/sales.db-wal", 0x7fff5811f920) = -1 ENOENT (No such file or directory)
+fstat(5, {st_mode=S_IFREG|0644, st_size=20480, ...}) = 0
+fcntl(5, F_SETLK, {l_type=F_WRLCK, l_whence=SEEK_SET, l_start=1073741825, l_len=1}) = 0
+stat("/tmp/sales.db", {st_mode=S_IFREG|0644, st_size=20480, ...}) = 0
+getpid()                                = 34
+stat("/tmp/sales.db", {st_mode=S_IFREG|0644, st_size=20480, ...}) = 0
+open("/tmp/sales.db-journal", O_RDWR|O_CREAT|O_LARGEFILE|O_NOFOLLOW|O_CLOEXEC, 0644) = 6
+fcntl(6, F_SETFD, FD_CLOEXEC)           = 0
+fstat(6, {st_mode=S_IFREG|0644, st_size=0, ...}) = 0
+geteuid()                               = 0
+fchown(6, 0, 0)                         = 0
+pwrite64(6, "\0\0\0\0\0\0\0\0\0\0\0\0\263{\314\374\0\0\0\5\0\0\2\0\0\0\20\0\0\0\0\0"..., 512, 0) = 512
+pwrite64(6, "\0\0\0\4", 4, 512)         = 4
+pwrite64(6, "\r\0\0\0\1\17\360\0\17\360\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"..., 4096, 516) = 4096
+pwrite64(6, "\263{\314\374", 4, 4612)   = 4
+fcntl(5, F_SETLK, {l_type=F_WRLCK, l_whence=SEEK_SET, l_start=1073741824, l_len=1}) = 0
+fcntl(5, F_SETLK, {l_type=F_WRLCK, l_whence=SEEK_SET, l_start=1073741826, l_len=510}) = 0
+pwrite64(6, "\0\0\0\1", 4, 4616)        = 4
+pwrite64(6, "SQLite format 3\0\20\0\1\1\0@  \0\0\0\n\0\0\0\5"..., 4096, 4620) = 4096
+pwrite64(6, "\263{\316C", 4, 8716)      = 4
+pread64(6, "", 8, 9216)                 = 0
+fdatasync(6)                            = 0
+open("/tmp", O_RDONLY|O_LARGEFILE|O_CLOEXEC) = 7
+fcntl(7, F_SETFD, FD_CLOEXEC)           = 0
+fdatasync(7)                            = 0
+close(7)                                = 0
+pwrite64(6, "\331\325\5\371 \241c\327\0\0\0\2", 12, 0) = 12
+fdatasync(6)                            = 0
+pwrite64(5, "SQLite format 3\0\20\0\1\1\0@  \0\0\0\v\0\0\0\5"..., 4096, 0) = 4096
+pwrite64(5, "\r\0\0\0\2\17\337\0\17\360\17\337\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"..., 4096, 12288) = 4096
+fdatasync(5)                            = 0
+close(6)                                = 0
+unlink("/tmp/sales.db-journal")         = 0
+fcntl(5, F_SETLK, {l_type=F_RDLCK, l_whence=SEEK_SET, l_start=1073741826, l_len=510}) = 0
+fcntl(5, F_SETLK, {l_type=F_UNLCK, l_whence=SEEK_SET, l_start=1073741824, l_len=2}) = 0
+fcntl(5, F_SETLK, {l_type=F_UNLCK, l_whence=SEEK_SET, l_start=0, l_len=0}) = 0
+fcntl(5, F_SETLK, {l_type=F_RDLCK, l_whence=SEEK_SET, l_start=1073741824, l_len=1}) = 0
+fcntl(5, F_SETLK, {l_type=F_RDLCK, l_whence=SEEK_SET, l_start=1073741826, l_len=510}) = 0
+fcntl(5, F_SETLK, {l_type=F_UNLCK, l_whence=SEEK_SET, l_start=1073741824, l_len=1}) = 0
+stat("/tmp/sales.db-journal", 0x7fff5811f920) = -1 ENOENT (No such file or directory)
+pread64(5, "\0\0\0\v\0\0\0\5\0\0\0\0\0\0\0\0", 16, 24) = 16
+stat("/tmp/sales.db-wal", 0x7fff5811f920) = -1 ENOENT (No such file or directory)
+fstat(5, {st_mode=S_IFREG|0644, st_size=20480, ...}) = 0
+fcntl(5, F_SETLK, {l_type=F_WRLCK, l_whence=SEEK_SET, l_start=1073741825, l_len=1}) = 0
+stat("/tmp/sales.db", {st_mode=S_IFREG|0644, st_size=20480, ...}) = 0
+getpid()                                = 34
+stat("/tmp/sales.db", {st_mode=S_IFREG|0644, st_size=20480, ...}) = 0
+open("/tmp/sales.db-journal", O_RDWR|O_CREAT|O_LARGEFILE|O_NOFOLLOW|O_CLOEXEC, 0644) = 6
+fcntl(6, F_SETFD, FD_CLOEXEC)           = 0
+fstat(6, {st_mode=S_IFREG|0644, st_size=0, ...}) = 0
+geteuid()                               = 0
+fchown(6, 0, 0)                         = 0
+pwrite64(6, "\0\0\0\0\0\0\0\0\0\0\0\0\33\367\351\214\0\0\0\5\0\0\2\0\0\0\20\0\0\0\0\0"..., 512, 0) = 512
+pwrite64(6, "\0\0\0\5", 4, 512)         = 4
+pwrite64(6, "\r\0\0\0\0\20\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"..., 4096, 516) = 4096
+pwrite64(6, "\33\367\351\214", 4, 4612) = 4
+fcntl(5, F_SETLK, {l_type=F_WRLCK, l_whence=SEEK_SET, l_start=1073741824, l_len=1}) = 0
+fcntl(5, F_SETLK, {l_type=F_WRLCK, l_whence=SEEK_SET, l_start=1073741826, l_len=510}) = 0
+pwrite64(6, "\0\0\0\1", 4, 4616)        = 4
+pwrite64(6, "SQLite format 3\0\20\0\1\1\0@  \0\0\0\v\0\0\0\5"..., 4096, 4620) = 4096
+pwrite64(6, "\33\367\352\323", 4, 8716) = 4
+pread64(6, "", 8, 9216)                 = 0
+fdatasync(6)                            = 0
+open("/tmp", O_RDONLY|O_LARGEFILE|O_CLOEXEC) = 7
+fcntl(7, F_SETFD, FD_CLOEXEC)           = 0
+fdatasync(7)                            = 0
+close(7)                                = 0
+pwrite64(6, "\331\325\5\371 \241c\327\0\0\0\2", 12, 0) = 12
+fdatasync(6)                            = 0
+pwrite64(5, "SQLite format 3\0\20\0\1\1\0@  \0\0\0\f\0\0\0\5"..., 4096, 0) = 4096
+pwrite64(5, "\r\0\0\0\1\17\371\0\17\371\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"..., 4096, 16384) = 4096
+fdatasync(5)                            = 0
+close(6)                                = 0
+unlink("/tmp/sales.db-journal")         = 0
+fcntl(5, F_SETLK, {l_type=F_RDLCK, l_whence=SEEK_SET, l_start=1073741826, l_len=510}) = 0
+fcntl(5, F_SETLK, {l_type=F_UNLCK, l_whence=SEEK_SET, l_start=1073741824, l_len=2}) = 0
+fcntl(5, F_SETLK, {l_type=F_UNLCK, l_whence=SEEK_SET, l_start=0, l_len=0}) = 0
+fcntl(5, F_SETLK, {l_type=F_RDLCK, l_whence=SEEK_SET, l_start=1073741824, l_len=1}) = 0
+fcntl(5, F_SETLK, {l_type=F_RDLCK, l_whence=SEEK_SET, l_start=1073741826, l_len=510}) = 0
+fcntl(5, F_SETLK, {l_type=F_UNLCK, l_whence=SEEK_SET, l_start=1073741824, l_len=1}) = 0
+stat("/tmp/sales.db-journal", 0x7fff5811f920) = -1 ENOENT (No such file or directory)
+pread64(5, "\0\0\0\f\0\0\0\5\0\0\0\0\0\0\0\0", 16, 24) = 16
+stat("/tmp/sales.db-wal", 0x7fff5811f920) = -1 ENOENT (No such file or directory)
+fstat(5, {st_mode=S_IFREG|0644, st_size=20480, ...}) = 0
+fcntl(5, F_SETLK, {l_type=F_WRLCK, l_whence=SEEK_SET, l_start=1073741825, l_len=1}) = 0
+stat("/tmp/sales.db", {st_mode=S_IFREG|0644, st_size=20480, ...}) = 0
+getpid()                                = 34
+stat("/tmp/sales.db", {st_mode=S_IFREG|0644, st_size=20480, ...}) = 0
+open("/tmp/sales.db-journal", O_RDWR|O_CREAT|O_LARGEFILE|O_NOFOLLOW|O_CLOEXEC, 0644) = 6
+fcntl(6, F_SETFD, FD_CLOEXEC)           = 0
+fstat(6, {st_mode=S_IFREG|0644, st_size=0, ...}) = 0
+geteuid()                               = 0
+fchown(6, 0, 0)                         = 0
+pwrite64(6, "\0\0\0\0\0\0\0\0\0\0\0\0^\33\334\373\0\0\0\5\0\0\2\0\0\0\20\0\0\0\0\0"..., 512, 0) = 512
+pwrite64(6, "\0\0\0\5", 4, 512)         = 4
+pwrite64(6, "\r\0\0\0\1\17\371\0\17\371\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"..., 4096, 516) = 4096
+pwrite64(6, "^\33\334\373", 4, 4612)    = 4
+fcntl(5, F_SETLK, {l_type=F_WRLCK, l_whence=SEEK_SET, l_start=1073741824, l_len=1}) = 0
+fcntl(5, F_SETLK, {l_type=F_WRLCK, l_whence=SEEK_SET, l_start=1073741826, l_len=510}) = 0
+pwrite64(6, "\0\0\0\1", 4, 4616)        = 4
+pwrite64(6, "SQLite format 3\0\20\0\1\1\0@  \0\0\0\f\0\0\0\5"..., 4096, 4620) = 4096
+pwrite64(6, "^\33\336B", 4, 8716)       = 4
+pread64(6, "", 8, 9216)                 = 0
+fdatasync(6)                            = 0
+open("/tmp", O_RDONLY|O_LARGEFILE|O_CLOEXEC) = 7
+fcntl(7, F_SETFD, FD_CLOEXEC)           = 0
+fdatasync(7)                            = 0
+close(7)                                = 0
+pwrite64(6, "\331\325\5\371 \241c\327\0\0\0\2", 12, 0) = 12
+fdatasync(6)                            = 0
+pwrite64(5, "SQLite format 3\0\20\0\1\1\0@  \0\0\0\r\0\0\0\5"..., 4096, 0) = 4096
+pwrite64(5, "\r\0\0\0\2\17\360\0\17\371\17\360\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"..., 4096, 16384) = 4096
+fdatasync(5)                            = 0
+close(6)                                = 0
+unlink("/tmp/sales.db-journal")         = 0
+fcntl(5, F_SETLK, {l_type=F_RDLCK, l_whence=SEEK_SET, l_start=1073741826, l_len=510}) = 0
+fcntl(5, F_SETLK, {l_type=F_UNLCK, l_whence=SEEK_SET, l_start=1073741824, l_len=2}) = 0
+fcntl(5, F_SETLK, {l_type=F_UNLCK, l_whence=SEEK_SET, l_start=0, l_len=0}) = 0
+fcntl(5, F_SETLK, {l_type=F_RDLCK, l_whence=SEEK_SET, l_start=1073741824, l_len=1}) = 0
+fcntl(5, F_SETLK, {l_type=F_RDLCK, l_whence=SEEK_SET, l_start=1073741826, l_len=510}) = 0
+fcntl(5, F_SETLK, {l_type=F_UNLCK, l_whence=SEEK_SET, l_start=1073741824, l_len=1}) = 0
+stat("/tmp/sales.db-journal", 0x7fff5811f920) = -1 ENOENT (No such file or directory)
+pread64(5, "\0\0\0\r\0\0\0\5\0\0\0\0\0\0\0\0", 16, 24) = 16
+stat("/tmp/sales.db-wal", 0x7fff5811f920) = -1 ENOENT (No such file or directory)
+fstat(5, {st_mode=S_IFREG|0644, st_size=20480, ...}) = 0
+fcntl(5, F_SETLK, {l_type=F_WRLCK, l_whence=SEEK_SET, l_start=1073741825, l_len=1}) = 0
+stat("/tmp/sales.db", {st_mode=S_IFREG|0644, st_size=20480, ...}) = 0
+getpid()                                = 34
+stat("/tmp/sales.db", {st_mode=S_IFREG|0644, st_size=20480, ...}) = 0
+open("/tmp/sales.db-journal", O_RDWR|O_CREAT|O_LARGEFILE|O_NOFOLLOW|O_CLOEXEC, 0644) = 6
+fcntl(6, F_SETFD, FD_CLOEXEC)           = 0
+fstat(6, {st_mode=S_IFREG|0644, st_size=0, ...}) = 0
+geteuid()                               = 0
+fchown(6, 0, 0)                         = 0
+pwrite64(6, "\0\0\0\0\0\0\0\0\0\0\0\0\277`&A\0\0\0\5\0\0\2\0\0\0\20\0\0\0\0\0"..., 512, 0) = 512
+pwrite64(6, "\0\0\0\5", 4, 512)         = 4
+pwrite64(6, "\r\0\0\0\2\17\360\0\17\371\17\360\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"..., 4096, 516) = 4096
+pwrite64(6, "\277`&A", 4, 4612)         = 4
+fcntl(5, F_SETLK, {l_type=F_WRLCK, l_whence=SEEK_SET, l_start=1073741824, l_len=1}) = 0
+fcntl(5, F_SETLK, {l_type=F_WRLCK, l_whence=SEEK_SET, l_start=1073741826, l_len=510}) = 0
+pwrite64(6, "\0\0\0\1", 4, 4616)        = 4
+pwrite64(6, "SQLite format 3\0\20\0\1\1\0@  \0\0\0\r\0\0\0\5"..., 4096, 4620) = 4096
+pwrite64(6, "\277`'\210", 4, 8716)      = 4
+pread64(6, "", 8, 9216)                 = 0
+fdatasync(6)                            = 0
+open("/tmp", O_RDONLY|O_LARGEFILE|O_CLOEXEC) = 7
+fcntl(7, F_SETFD, FD_CLOEXEC)           = 0
+fdatasync(7)                            = 0
+close(7)                                = 0
+pwrite64(6, "\331\325\5\371 \241c\327\0\0\0\2", 12, 0) = 12
+fdatasync(6)                            = 0
+pwrite64(5, "SQLite format 3\0\20\0\1\1\0@  \0\0\0\16\0\0\0\5"..., 4096, 0) = 4096
+pwrite64(5, "\r\0\0\0\3\17\347\0\17\371\17\360\17\347\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"..., 4096, 16384) = 4096
+fdatasync(5)                            = 0
+close(6)                                = 0
+unlink("/tmp/sales.db-journal")         = 0
+fcntl(5, F_SETLK, {l_type=F_RDLCK, l_whence=SEEK_SET, l_start=1073741826, l_len=510}) = 0
+fcntl(5, F_SETLK, {l_type=F_UNLCK, l_whence=SEEK_SET, l_start=1073741824, l_len=2}) = 0
+fcntl(5, F_SETLK, {l_type=F_UNLCK, l_whence=SEEK_SET, l_start=0, l_len=0}) = 0
+read(4, "", 1024)                       = 0
+close(4)                                = 0
+stat("query.sql", {st_mode=S_IFREG|0644, st_size=531, ...}) = 0
+open("query.sql", O_RDONLY|O_LARGEFILE) = 4
+read(4, ".headers on\n.mode column\n\n-- Lis"..., 1024) = 531
+fcntl(5, F_SETLK, {l_type=F_RDLCK, l_whence=SEEK_SET, l_start=1073741824, l_len=1}) = 0
+fcntl(5, F_SETLK, {l_type=F_RDLCK, l_whence=SEEK_SET, l_start=1073741826, l_len=510}) = 0
+fcntl(5, F_SETLK, {l_type=F_UNLCK, l_whence=SEEK_SET, l_start=1073741824, l_len=1}) = 0
+stat("/tmp/sales.db-journal", 0x7fff5811f920) = -1 ENOENT (No such file or directory)
+pread64(5, "\0\0\0\16\0\0\0\5\0\0\0\0\0\0\0\0", 16, 24) = 16
+stat("/tmp/sales.db-wal", 0x7fff5811f920) = -1 ENOENT (No such file or directory)
+fstat(5, {st_mode=S_IFREG|0644, st_size=20480, ...}) = 0
+fcntl(5, F_SETLK, {l_type=F_UNLCK, l_whence=SEEK_SET, l_start=0, l_len=0}) = 0
+ioctl(1, TIOCGWINSZ, {ws_row=24, ws_col=80, ws_xpixel=0, ws_ypixel=0}) = 0
+writev(1, [{iov_base="CustomerID  Name         Email  "..., iov_len=42}, {iov_base="\n", iov_len=1}], 2) = 43
+writev(1, [{iov_base="----------  -----------  -------"..., iov_len=42}, {iov_base="\n", iov_len=1}], 2) = 43
+writev(1, [{iov_base="1           Alice Smith  alice@e"..., iov_len=42}, {iov_base="\n", iov_len=1}], 2) = 43
+writev(1, [{iov_base="2           Bob Johnson  bob@exa"..., iov_len=42}, {iov_base="\n", iov_len=1}], 2) = 43
+fcntl(5, F_SETLK, {l_type=F_RDLCK, l_whence=SEEK_SET, l_start=1073741824, l_len=1}) = 0
+fcntl(5, F_SETLK, {l_type=F_RDLCK, l_whence=SEEK_SET, l_start=1073741826, l_len=510}) = 0
+fcntl(5, F_SETLK, {l_type=F_UNLCK, l_whence=SEEK_SET, l_start=1073741824, l_len=1}) = 0
+stat("/tmp/sales.db-journal", 0x7fff5811f920) = -1 ENOENT (No such file or directory)
+pread64(5, "\0\0\0\16\0\0\0\5\0\0\0\0\0\0\0\0", 16, 24) = 16
+stat("/tmp/sales.db-wal", 0x7fff5811f920) = -1 ENOENT (No such file or directory)
+fstat(5, {st_mode=S_IFREG|0644, st_size=20480, ...}) = 0
+fcntl(5, F_SETLK, {l_type=F_UNLCK, l_whence=SEEK_SET, l_start=0, l_len=0}) = 0
+writev(1, [{iov_base="OrderID  Customer     OrderDate ", iov_len=32}, {iov_base="\n", iov_len=1}], 2) = 33
+writev(1, [{iov_base="-------  -----------  ----------", iov_len=32}, {iov_base="\n", iov_len=1}], 2) = 33
+writev(1, [{iov_base="1        Alice Smith  2025-03-20", iov_len=32}, {iov_base="\n", iov_len=1}], 2) = 33
+writev(1, [{iov_base="2        Bob Johnson  2025-03-21", iov_len=32}, {iov_base="\n", iov_len=1}], 2) = 33
+mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x77b1d00bf000
+munmap(0x77b1d00bf000, 4096)            = 0
+fcntl(5, F_SETLK, {l_type=F_RDLCK, l_whence=SEEK_SET, l_start=1073741824, l_len=1}) = 0
+fcntl(5, F_SETLK, {l_type=F_RDLCK, l_whence=SEEK_SET, l_start=1073741826, l_len=510}) = 0
+fcntl(5, F_SETLK, {l_type=F_UNLCK, l_whence=SEEK_SET, l_start=1073741824, l_len=1}) = 0
+stat("/tmp/sales.db-journal", 0x7fff5811f920) = -1 ENOENT (No such file or directory)
+pread64(5, "\0\0\0\16\0\0\0\5\0\0\0\0\0\0\0\0", 16, 24) = 16
+stat("/tmp/sales.db-wal", 0x7fff5811f920) = -1 ENOENT (No such file or directory)
+fstat(5, {st_mode=S_IFREG|0644, st_size=20480, ...}) = 0
+fcntl(5, F_SETLK, {l_type=F_UNLCK, l_whence=SEEK_SET, l_start=0, l_len=0}) = 0
+writev(1, [{iov_base="OrderID  Customer     ProductNam"..., iov_len=51}, {iov_base="\n", iov_len=1}], 2) = 52
+writev(1, [{iov_base="-------  -----------  ----------"..., iov_len=51}, {iov_base="\n", iov_len=1}], 2) = 52
+writev(1, [{iov_base="1        Alice Smith  Laptop    "..., iov_len=51}, {iov_base="\n", iov_len=1}], 2) = 52
+writev(1, [{iov_base="1        Alice Smith  Headphones"..., iov_len=51}, {iov_base="\n", iov_len=1}], 2) = 52
+writev(1, [{iov_base="2        Bob Johnson  Smartphone"..., iov_len=51}, {iov_base="\n", iov_len=1}], 2) = 52
+read(4, "", 1024)                       = 0
+close(4)                                = 0
+read(3, "", 1024)                       = 0
+close(3)                                = 0
+writev(1, [{iov_base="SQLite version 3.44.2 2023-11-24"..., iov_len=41}, {iov_base="\nEnter \".help\" for usage hints.\n", iov_len=32}], 2) = 73
+getuid()                                = 0
+open("/etc/passwd", O_RDONLY|O_LARGEFILE|O_CLOEXEC) = 3
+fcntl(3, F_SETFD, FD_CLOEXEC)           = 0
+fcntl(3, F_SETFD, FD_CLOEXEC)           = 0
+read(3, "root:x:0:0:root:/root:/bin/ash\nb"..., 1024) = 1024
+lseek(3, -993, SEEK_CUR)                = 31
+close(3)                                = 0
+writev(1, [{iov_base="sqlite> ", iov_len=8}, {iov_base=NULL, iov_len=0}], 2) = 8
+read(0, "", 1024)                       = 0
+nanosleep({tv_sec=0, tv_nsec=50000000}, NULL) = 0
+writev(1, [{iov_base="", iov_len=0}, {iov_base="\n", iov_len=1}], 2) = 1
+stat("/tmp/sales.db", {st_mode=S_IFREG|0644, st_size=20480, ...}) = 0
+fstat(5, {st_mode=S_IFREG|0644, st_size=20480, ...}) = 0
+stat("/tmp/sales.db", {st_mode=S_IFREG|0644, st_size=20480, ...}) = 0
+close(5)                                = 0
+munmap(0x77b1d00c1000, 90112)           = 0
+munmap(0x77b1d00e5000, 8192)            = 0
+munmap(0x77b1d00be000, 4096)            = 0
+munmap(0x77b1d00e7000, 16384)           = 0
+munmap(0x77b1d00eb000, 4096)            = 0
+munmap(0x77b1d00e4000, 4096)            = 0
+munmap(0x77b1d00d7000, 49152)           = 0
+munmap(0x77b1d00c0000, 4096)            = 0
+exit_group(0)                           = ?
++++ exited with 0 +++
