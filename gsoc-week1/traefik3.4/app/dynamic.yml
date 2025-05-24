@@ -1,0 +1,13 @@
+http:
+  routers:
+    python-app:
+      rule: "Path(`/`)"
+      service: python-service
+      entryPoints:
+        - web
+
+  services:
+    python-service:
+      loadBalancer:
+        servers:
+          - url: "http://192.168.101.7:5000"
