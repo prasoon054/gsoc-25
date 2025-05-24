@@ -12,9 +12,11 @@
     curl --request PUT --data @web-service.json http://localhost:8500/v1/agent/service/register
     ```
 - Did some health checks.
-- System call logs from `strace` stored in [`strace_out.log`](strace_out.log)
+- System call logs from `strace` stored in [`strace_out.txt`](strace_out.txt)
+    - Added strace_out.txt in .gitignore for obvious reasons
+---
+## Unsupported System Calls
 - The following syscalls which were used by consul are not supported in Unikraft:
     - `clone`
-    - `detached`
     - `readlinkat`
     - `rt_sigreturn`
