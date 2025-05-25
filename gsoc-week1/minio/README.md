@@ -26,7 +26,7 @@ strace minio server /data --console-address ":9001" 2> /tmp/strace_out.txt
     - Upload a file named `example.txt` to the bucket.
 ---
 ## Unsupported System Calls
-- The following syscalls which were used by consul are not supported in Unikraft:
+- The following syscalls which were used by minio are not supported in Unikraft:
     - `clone`
     - `readlinkat`
     - `rt_sigreturn`
