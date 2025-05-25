@@ -15,4 +15,4 @@ python mqtt_app.py
 ---
 ## Unsupported System Calls
 - The following syscalls which were used by mosquitto are not supported in Unikraft:
-    - `brk` &rarr; Used only once (not sure, during what step)
+    - `brk` &rarr; Used only once (not sure if it would be a bottleneck)
