@@ -20,7 +20,7 @@ traefik \
 ```
 - Accessed services from host machine:
     - `http://localhost` &rarr; Proxies to Python server
-    - `http://localhost:8080/dashboard/ &rarr; Traefik dashboard
+    - `http://localhost:8080/dashboard/` &rarr; Traefik dashboard
 
 ## Unsupported System Calls
 - These system calls were used by traefik which is not supported in Unikraft:
