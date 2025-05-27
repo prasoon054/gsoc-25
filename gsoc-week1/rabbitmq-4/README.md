@@ -11,7 +11,7 @@ apt-get install -y strace
 ```
 - Start RabbitMQ under `strace`
 ```bash
-strace rabbitmq-server 2> /tmp/strace_out.log
+strace -f -o /tmp/strace_out.log rabbitmq-server
 ```
 - On client machine, run [`test_rabbit.py`](app/test_rabbitmq.py)
 ```bash
