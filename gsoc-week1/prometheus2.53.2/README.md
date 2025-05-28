@@ -8,11 +8,11 @@ docker run -it -p 9000:9000 -p 9001:9001 /bin/sh
 ```sh
 apk update && apk add strace prometheus
 ```
-- Started a http server on host machine.
+- Started a http server on container.
 ```bash
 python3 -m http.server 9000
 ```
-- Created a demo metric on host machine
+- Created a demo metric on container
 ```bash
 echo -e "demo_metric 42" > metrics
 ```

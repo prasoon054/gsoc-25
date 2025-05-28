@@ -20,6 +20,16 @@ strace syncthing -gui-address="0.0.0.0:8384" 2> /tmp/strace_out.log
 ---
 ## Unsupported System Calls
 - Following system calls were used by syncthing, but not implemented in Unikraft
-    - `clone`
-    - `readlinkat`
-    - `rt_sigreturn`
+  - `brk`
+  - `clone`
+  - `execve`
+  - `fchmodat`
+  - `inotify_add_watch`
+  - `inotify_init1`
+  - `inotify_rm_watch`
+  - `ioprio_set`
+  - `pidfd_open`
+  - `pidfd_send_signal`
+  - `readlinkat`
+  - `recvmmsg`
+  - `rt_sigreturn`

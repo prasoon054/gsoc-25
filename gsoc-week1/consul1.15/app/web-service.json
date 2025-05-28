@@ -1,0 +1,10 @@
+{
+  "ID": "web1",
+  "Name": "web",
+  "Address": "host.docker.internal",
+  "Port": 8080,
+  "Check": {
+    "HTTP": "http://host.docker.internal:8080/health",
+    "Interval": "10s"
+  }
+}

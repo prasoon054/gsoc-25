@@ -20,6 +20,25 @@ killall yes
 ## Unsupported System Calls
 - Following system calls were used by netdata but not supported in Unikraft:
     - `brk`
+    - `clock_adjtime`
     - `clone`
+    - `close_range`
+    - `execve`
+    - `faccessat2`
+    - `fchmodat`
+    - `fchownat`
+    - `get_mempolicy`
+    - `linkat`
+    - `mknodat`
+    - `personality`
+    - `pidfd_open`
+    - `pidfd_send_signal`
     - `readlinkat`
+    - `restart_syscall`
+    - `rseq`
     - `rt_sigreturn`
+    - `sched_getscheduler`
+    - `semctl`
+    - `sendmmsg`
+    - `set_robust_list`
+    - `statx`

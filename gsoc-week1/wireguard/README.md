@@ -14,6 +14,11 @@ alpine /bin/sh
 ```sh
 apk add strace wireguard-tools-wg-quick iproute iptables
 ```
+- Generate (SK, PK) pair.
+```sh
+cd /etc/wireguard
+wg genkey | tee privatekey | wg pubkey > publickey
+```
 - Create a wireguard interface (`/etc/wireguard/wg0.conf`)
 ```console
 [Interface]
@@ -35,6 +40,8 @@ strace wg-quick down wg0 2>> /tmp/strace_out.log
 ## Unsupported System Calls
 - System calls used by wireguard which are not supported in Unikraft
     - `brk`
+    - `clone`
+    - `execve`
     - `faccessat2`
-    - `fork`
+    - `readlinkat`
     - `rt_sigreturn`
