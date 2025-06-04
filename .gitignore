@@ -1,2 +1,4 @@
 .env
 strace_out.txt
+.unikraft
+.config*

@@ -20,10 +20,8 @@ open
 pread64
 pwrite64
 read
-readv
 rt_sigaction
 rt_sigprocmask
-set_tid_address
 stat
 unlink
 writev

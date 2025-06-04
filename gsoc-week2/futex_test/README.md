@@ -1,0 +1,1 @@
+- The issue in adding sqlite in binary compatibility mode was a missing configuration.
