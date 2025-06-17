@@ -181,3 +181,5 @@ membarrier
 open
 openat
 sync
+clone
+execve

@@ -1,5 +1,7 @@
 accept4
+arch_prctl
 bind
+brk
 clone
 close
 connect
@@ -7,8 +9,8 @@ epoll_create1
 epoll_ctl
 epoll_pwait
 eventfd2
+execve
 exit_group
-fallocate
 fcntl
 flock
 fstat
@@ -24,13 +26,10 @@ getsockopt
 gettid
 ioctl
 listen
-lseek
 madvise
 membarrier
-mkdirat
 mmap
 mprotect
-munmap
 nanosleep
 newfstatat
 openat
@@ -38,13 +37,13 @@ pread64
 prlimit64
 read
 readlinkat
-renameat
 rt_sigaction
 rt_sigprocmask
 rt_sigreturn
 sched_getaffinity
 sched_yield
 setsockopt
+set_tid_address
 sigaltstack
 socket
 statfs

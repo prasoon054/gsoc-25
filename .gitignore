@@ -1,4 +1,5 @@
 .env
-strace_out.txt
+*.txt
+*.log
 .unikraft
 .config*

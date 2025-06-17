@@ -6,7 +6,7 @@ docker run -it -p 9000:9000 -p 9001:9001 /bin/sh
 ```
 - Installed the latest `prometheus` using `apk` package manager.
 ```sh
-apk update && apk add strace prometheus
+apk add --repository https://dl-cdn.alpinelinux.org/alpine/edge/community prometheus=2.53.4-r2
 ```
 - Started a http server on container.
 ```bash
